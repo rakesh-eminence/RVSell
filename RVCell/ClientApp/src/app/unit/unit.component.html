@@ -1,0 +1,227 @@
+
+
+<div class="col-lg-3 col-md-3 w-7 easyIt">
+
+  <div class="border_block sides easyIt">
+
+    <div class="text-center ">
+      <img class="mx-auto mb-15 mt-10" src="../assets/images/logonew.png" style="width:120px;">
+      <!--<button class="btn btn-primary mx-auto">Edit Image</button>-->
+    </div>
+
+
+    <app-search-unit></app-search-unit>
+    <div class="encloseIt">
+      <p class="text-left filter "><i class="fa fa-filter"></i>Filter</p>
+      <select class="form-control " (change)="onChangeMinRoom($event.target.value)">
+        <option selected="" value="0">Select Rooms</option>
+
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+      </select>
+
+      <!--<select class="form-control " (change)="onChangeMaxRoom($event.target.value)">
+        <option selected="" value="0">Select Rooms (maximum) </option>
+
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>-->
+
+      <select class="form-control " (change)="onChangeMinBathRoom($event.target.value)">
+        <option selected="" value="0">Select Bathrooms </option>
+
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+      </select>
+
+      <!--<select class="form-control " (change)="onChangeMaxBathRoom($event.target.value)">
+        <option selected="" value="0">Select Bathrooms (maximum) </option>
+
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>-->
+
+
+
+      <select class="form-control " name="select" id="select" [(ngModel)]="destinationModel" (change)="onSelectdestinationChange(destinationModel)">
+        <option *ngFor="let item of destinationModelList" [ngValue]="item"
+                [disabled]="item.value==0">
+          {{item.DestinationTypeName}}
+        </option>
+      </select>
+
+
+
+
+      <select class="form-control " name="select" id="select" [(ngModel)]="sateModel" (change)="onSelectStateChange(sateModel)">
+        <option *ngFor="let item of destinationStateModelList" [ngValue]="item"
+                [disabled]="item.value==0">
+          {{item.Name}}
+        </option>
+      </select>
+
+
+
+
+      <div class="btn-group text-center left_bot_button">
+        <input type="submit" class="form-group btn-primary " value="Search" (click)="seachFilterProperty()">
+        <input type="submit" class="form-group btn-primary " (click)="seachAllDefualtRecord()" value="Show All Units">
+      </div>
+    </div>
+  </div>
+  <div class="border_collaspe easyIt">
+    <ul>
+      <li>
+        <a href="#">
+          <img src="../assets/images/shape_img.png">
+
+        </a>
+        <div class="hvrElemnt">
+          <a href="#">Edit Image</a>
+        </div>
+      </li>
+      <!--<li>
+        <a href="#">
+          <img src="../assets/images/serch.png">
+        </a>
+        <div class="hvrElemnt">
+          <div class="textOuter">
+            <input type="text" placeholder="Search using keywords" [(ngModel)]="this.globals.searchText" (keyup)="searchCollapse(searchTextCollapse)">
+          </div>
+
+        </div>
+      </li>-->
+      <li>
+        <a href="#">
+          <img src="../assets/images/room.png">
+        </a>
+        <div class="hvrElemnt">
+          <div class="textOuter">
+            <select class="form-control" (change)="onChangeMinRoomCollapse($event.target.value)">
+              <option selected="" value="0">Select Rooms </option>
+
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+            </select>
+          </div>
+
+        </div>
+      </li>
+      <!--<li>
+        <a href="#">
+          <img src="../assets/images/room.png">
+        </a>
+        <div class="hvrElemnt">
+          <div class="textOuter">
+            <select class="form-control" (change)="onChangeMaxRoomCollapse($event.target.value)">
+              <option selected="" value="0">Select Rooms (maximum) </option>
+
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+        </div>
+      </li>-->
+      <li>
+        <a href="#">
+          <img src="../assets/images/bathroom.jpg">
+        </a>
+        <div class="hvrElemnt">
+          <div class="textOuter">
+            <select class="form-control " (change)="onChangeMinBathRoomCollapse($event.target.value)">
+              <option selected="" value="0">Select Bathrooms </option>
+
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+            </select>
+          </div>
+        </div>
+      </li>
+      <!--<li>
+        <a href="#">
+          <img src="../assets/images/bathroom.jpg">
+        </a>
+        <div class="hvrElemnt">
+          <div class="textOuter">
+            <select class="form-control " (change)="onChangeMaxBathRoomCollapse($event.target.value)">
+              <option selected="" value="0">Select Bathrooms (maximum) </option>
+
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+        </div>
+      </li>-->
+      <li>
+        <a href="#">
+          <img src="../assets/images/loc.png">
+        </a>
+        <div class="hvrElemnt">
+          <div class="textOuter">
+            <select class="form-control " name="select" id="select" [(ngModel)]="destinationModel" (change)="onSelectdestinationChangeCollapse(destinationModel)">
+              <option *ngFor="let item of destinationModelList" [ngValue]="item"
+                      [disabled]="item.value==0">
+                {{item.DestinationTypeName}}
+              </option>
+            </select>
+          </div>
+        </div>
+
+      </li>
+      <li>
+        <a href="#">
+          <img src="../assets/images/state.png">
+        </a>
+        <div class="hvrElemnt">
+          <div class="textOuter">
+
+            <select class="form-control " name="select" id="select" [(ngModel)]="sateModel" (change)="onSelectStateChangeCollapse(sateModel)">
+              <option *ngFor="let item of destinationStateModelList" [ngValue]="item"
+                      [disabled]="item.value==0">
+                {{item.Name}}
+              </option>
+            </select>
+
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</div>

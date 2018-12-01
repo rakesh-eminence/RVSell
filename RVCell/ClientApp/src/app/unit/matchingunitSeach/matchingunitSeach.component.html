@@ -1,0 +1,13 @@
+<div class="top_bars rightHead  text-uppercase "><i class="fa fa-list "></i>List of Matching Units</div>
+<div class="input-group">
+  <input type="hidden" name="search_param" value="all" id="search_param">
+  <input type="text" class="form-control" [(ngModel)]="searchText" name="x" placeholder="Search term...">
+  
+  <span class="input-group-btn">
+    <button class="btn btn-default serachResult" type="button" (click)="SeachDefaultCategoryRecord()"><span class="glyphicon glyphicon-remove"></span></button>
+  </span>
+  <span class="input-group-btn">
+    <button class="btn btn-default serachResult" type="button" (click)="SeachCategoryRecord(searchText)"><span class="glyphicon glyphicon-search"></span></button>
+  </span>
+</div>
+

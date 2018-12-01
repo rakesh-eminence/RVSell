@@ -1,0 +1,190 @@
+.brand_list .footer {
+
+	position: absolute;
+}
+.lists {
+	border: 1px solid #ddd;
+	margin-bottom: 30px;
+}
+.lists .divider img {
+	margin: 20px 0;
+}
+.brandText
+{
+    text-align: center;
+    padding-top: 100px;
+}
+.brandText *
+{
+    font-size: 27px;
+    color: #333;
+    text-align: center;
+}
+
+.brandText svg
+{
+   max-width: 50px;
+}
+.brandText svg path
+{
+   fill:#777;
+}
+.brandText h2
+{
+    margin-top: 5px;
+}
+.brandText h2 strong
+{
+    font-weight: normal;
+    font-family: brandon_bold;
+}
+.list_head {
+	float: left;
+	width: 100%;
+	background: #FDEEEB;
+	padding: 8px 15px;
+	position: relative;
+	top: -1px;
+}
+.lists *
+{
+    color: #333;
+    list-style: none;
+    margin: 0;
+/*    padding: 0;*/
+}
+.list_head h3 {
+	float: left;
+	margin: 0;
+	font-size: 18px;
+	line-height: 25px;
+}
+.list_right
+{
+    float: right;
+}
+.list_right .dropdown a
+{
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+.list_right .dropdown a {
+	text-decoration: none;
+	color: #333;
+	font-size: 16px;
+	font-family: brandon_medium;
+}
+.list_right .dropdown a span
+{
+    margin-left: 5px;
+}
+
+.list_right .dropdown-menu a 
+{
+    font-size: 13px;
+    font-family: brandon_regular;
+}
+.logo_part
+{
+    text-align: center;
+}
+.logo_part a {
+	display: inline-block;
+	background: #FDEEEB;
+/*	color: #fff;*/
+	padding: 5px 10px;
+	margin: 20px 0;
+    color: #333;
+}
+.lists .logo_part > img {
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+.divider {
+	padding: 10px;
+	min-height: 179px;
+	border-right: 1px solid #ddd;
+}
+
+.lists .divider h5 {
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+.lists .divider h4 {
+	font-size: 38px;
+/*	margin-top: 25px;*/
+}
+.lists .divider ul
+{
+  
+    padding: 0;
+}
+.lists .divider ul li {
+	line-height: 25px;
+}
+.lists .divider ul li a
+{
+  color: #CF705C;  
+}
+.our_links.divider {
+	border: 0;
+}
+.brand_listing {
+	padding-top: 50px;
+}
+
+.lists .divider ul img {
+	margin: 0;
+	margin-right: 8px;
+}
+
+@media(max-width:991px)
+    
+{
+    .lists {
+	
+	padding-bottom: 15px;
+}
+    .brandText h2,.brandText h2 strong {
+	
+	font-size: 18px;
+}
+ .divider {
+     border: 0;
+
+	text-align: center;
+}
+    .list_head {
+	
+	top: 0;
+	z-index: 9;
+}
+}
+
+@media(max-width:480px)
+    
+{
+
+.brandText h2, .brandText h2 strong {
+	font-size: 15px;
+}
+    .list_head h3 {
+	
+	font-size: 15px;
+
+}
+    .brandText {
+	text-align: center;
+	padding-top: 26px;
+}
+    .lists * {
+	
+	padding: 1px 1px;
+}
+    .list_head h3 {
+	font-size: 15px;
+	padding-left: 10px;
+}
+}

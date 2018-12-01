@@ -1,0 +1,123 @@
+<div class="col-lg-9 col-md-9 w-93 mt-4 easyIt">
+
+  <div class="row">
+    <div class="col-md-12 fullLow">
+      <div class="top_bars rightHead top__tabs-content  text-uppercase tabText"><i class="fa fa-info-circle"></i>General information</div>
+
+      <div class="sidess top__tabs-content-body">
+
+        <div class="newList tabDesc tabContainer1" id="tab7c" style="overflow: scroll !important;height:170px !important;width:100% !important;">
+          <h3>{{brandModel.BrandName}}</h3>
+
+          <p> Rooms : <strong>{{brandModel.RoomCount}}</strong></p>
+          <p> Hours of Operation : <strong>{{brandModel.HoursOfOperation}}</strong></p>
+          <p> CRS Login :  <a href="{{brandModel.PmsCmsLinks}}">{{brandModel.PmsCmsLinks}}</a>{{brandModel.PmsCmsLinks}}</p>
+          <p> Primary POC : <strong>{{brandModel.Poc}}</strong></p>
+          <p> Markets Served : <strong>{{brandModel.MarketsServed}}</strong></p>
+          <p> Groups Allowed : <strong>{{brandModel.MarketsServed}}</strong></p>
+          <p> Gift Certificates : <strong>{{brandModel.GiftCertificates}}</strong></p>
+          <!--<p style="color: #93c54b"> Website : <a href="{{brandModel.Website}}">{{brandModel.Website}}</a>{{brandModel.Website}}</p>-->
+          <p style="color: #93c54b;cursor:pointer" (click)="websiteUrl(brandModel.Website)"> Website : {{brandModel.Website}}</p>
+          <p> Maintenance Email : <strong>{{brandModel.MaintenanceEmail}}</strong></p>
+          <p> Sales Contact Email : <strong>{{brandModel.SalesEmail}}</strong></p>
+          <p> Guest Use Email : <strong>{{brandModel.GuestUseEmail}}</strong></p>
+          <p> Sales Caller ID : <strong>{{brandModel.SalesCallerID}}</strong></p>
+          <p> Local Main : <strong>{{brandModel.PhoneMainLocal}}</strong></p>
+          <p> Fax : <strong>{{brandModel.Fax}}</strong></p>
+          <p> Toll Free : <strong>{{brandModel.PhoneTollFree}}</strong></p>
+          <p> Emergency Contact : <strong>{{brandModel.EmergencyContact}}</strong></p>
+          <p> Maintenance Contact : <strong>{{brandModel.MaintenanceContact}}</strong></p>
+
+        </div>
+
+
+
+        <div class="newList tabDesc tabContainer1" id="tab8c" style="display: none; overflow: scroll !important;height:170px !important;width:100% !important;">
+          <div [innerHTML]="htmlStrfaq"></div>
+        </div>
+
+
+
+        <div class="newList tabDesc tabContainer1" id="tab9c" style="display: none;overflow: scroll !important;height:170px !important;width:100% !important;">
+
+          <div [innerHTML]="htmlStrPolicy"></div>
+        </div>
+
+
+        <div class="newList tabDesc tabContainer1" id="tab10c" style="display: none;overflow: scroll !important;height:170px !important;width:100% !important;">
+          <span *ngFor="let item of propertyModel">{{item.Name}} : {{item.Parking}}</span>
+
+        </div>
+
+
+        <div class="newList tabDesc tabContainer1" id="tab11c" style="display: none;overflow: scroll !important;height:170px !important;width:100% !important;">
+
+          <div [innerHTML]="htmlAdditionalInformation"></div>
+
+
+        </div>
+
+        <div class="loadMore">
+
+          <!--<a href="#" data-toggle="modal" data-target="#addUserModel"><i class="fa fa-plus"></i>Add User Log</a>-->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</div>
+
+<div class="col-md-12 fullLow">
+  <div class="userEntery">
+    <div class="top_bars rightHead  text-uppercase">
+      <i class="fa  fa-clock-o"></i> Add/Insert User Log
+      <a href="#" id="closeLog"><i class="fa fa-close"></i></a>
+    </div>
+    <div class="add_user_log-form">
+      <form>
+        <div class="form-input-row">
+          <div class="form-group namefield">
+            <label>Name</label><br>
+            <input class="form-control">
+          </div>
+          <div class="form-group travelfield">
+            <label>travel date</label><br>
+            <input class="form-control" id="datetimepicker4">
+          </div>
+          <div class="form-group unitfield">
+            <label>unit id</label><br>
+            <input class="form-control">
+          </div>
+          <div class="form-group emailfield">
+            <label>email id</label><br>
+            <input class="form-control">
+          </div>
+          <div class="form-group contactfield">
+            <label>contact Info</label><br>
+            <input class="form-control">
+          </div>
+        </div>
+
+        <div class="form-textarea-row">
+          <div class="form-group notefield">
+            <label>note</label><br>
+            <textarea class="form-control"></textarea>
+          </div>
+        </div>
+        <div class="user_log-submit">
+          <a class="log_submit" href="#">add log</a>
+          <a class="log_remove" href="#">cancel</a>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<!-- test-->

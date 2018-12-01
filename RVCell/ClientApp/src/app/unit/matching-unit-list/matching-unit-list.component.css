@@ -1,0 +1,35 @@
+:host /deep/ p {
+  font-family: Lato;
+}
+
+:host /deep/ .search-results {
+  width: 100% !important;
+}
+
+:host /deep/ .title {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-70%);
+  left: 0;
+  background-color: rgba(0,0,0,.5);
+  color: white;
+  width: 100%;
+}
+  :host /deep/ .title small {
+    color: #eaeaea;
+  }
+
+.container.uicontainer {
+  margin-bottom: 10px !important;
+  margin-top: -24px;
+  margin-left: -26px;
+}
+
+
+  .container.uicontainer.nav-tabs.navbock {
+    display: inline-block !important
+  }
+.pr-0
+{
+  padding-right:0 !important;
+}

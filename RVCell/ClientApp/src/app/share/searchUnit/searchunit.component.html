@@ -1,0 +1,17 @@
+
+<div class="input-group search_input-left_group">
+  <!--<div class="input-group-btn search-panel">
+    <ul class="dropdown-menu filtersMen" role="menu">
+      <li *ngFor="let item of searchBasiCategory" (click)="SeachCategoryClick(item.text)" style="cursor:pointer"><a>{{item.text}}</a></li>
+    </ul>
+  </div>-->
+  <input type="text" class="form-control" [(ngModel)]="globals.searchText" name="search" placeholder="Search term..."(keydown)="enterSearchResult($event)">
+
+  <span class="input-group-btn">
+    <button class="btn btn-default serachResult abs_btn-search" type="button" (click)="SeachDefaultCategoryRecord()"><span class="glyphicon glyphicon-remove"></span></button>
+  </span>
+  <span class="input-group-btn search_icon-submit">
+    <button class="btn btn-default serachResult" type="button" (click)="SeachCategoryRecord(globals.searchText)"><span class="glyphicon glyphicon-search"></span></button>
+  </span>
+</div>
+

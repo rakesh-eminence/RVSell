@@ -1,0 +1,216 @@
+    a
+    {
+        cursor: pointer;
+    }
+    .script_heading span
+    {
+        font-size: 18px !important;
+        padding: 11px 15px !important;
+    }
+    .addScript .script_heading {
+        float: none;
+        width: -moz-calc(75% - 100px);
+        width: -webkit-calc(75% - 100px);
+        width: -o-calc(75% - 100px);
+        width: calc(70% - 30px);
+        min-height: 44px;
+    }
+    .real_form .form_blk.lvl_blkks {
+        padding: 10px;
+    }
+    .real_form .form_blk.lvl_blkks .lvl_blk {
+        padding: 15px 15px 0;
+        background: transparent;
+        border: 1px solid #E5D6D3;
+        margin-bottom: 8px;
+        display: none;
+    }
+    .real_form .form_blk.lvl_blkks .lvl_blk.first
+    {
+        display: block;
+    }
+    .real_form svg {
+        width: 24px;
+        fill: #fff;
+        margin-right: 7px;
+        padding: 4px;
+        vertical-align: middle;
+        position: relative;
+        top: -2px;
+    }
+    .real_form h4 {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 16px;
+        margin-top: 0;
+        background: #BF604C;
+        padding: 10px 5px 5px;
+        margin-bottom: 15px;
+    }
+    .real_form h4 a {
+        /* float: right; */
+        text-transform: capitalize;
+        text-decoration: none;
+        color: #fff;
+        cursor: pointer;
+        margin-right: 17px;
+        /* display: inline-block; */
+        font-size: 14px;
+    }
+
+    .real_form h4 i {
+        color: #D0715E;
+        height: 18px;
+        width: 18px;
+        background: #fff;
+        border-radius: 9px;
+        text-align: center;
+        margin-right: 4px;
+        margin-left: 7px;
+        font-size: 11px;
+        line-height: 18px;
+        float: right;
+    }
+   .real_form .form-group .checksIt input {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	margin-left: 0;
+	cursor: pointer;
+}
+    .checksIt {
+        text-align: right;
+        padding: 4px 0;
+        display: none;
+    }
+  .real_form .form_blk.lvl_blkks .lvl_blk .opt {
+	border-radius: 40px;
+	min-height: 36px;
+	width: 100%;
+	display: inline-block;
+}
+    .real_form .form_blk.lvl_blkks .lvl_blk .quest {
+    /*
+        outline: 1px solid #ddd !important;
+        outline-offset: -3px;
+    */
+        min-height: 38px;
+        padding-left: 35px;
+    }
+    .real_form .form_blk.lvl_blkks .lvl_blk .questContain {
+        position: relative;
+        margin-bottom: 15px;
+        margin-top: 25px;
+    }
+    .real_form .form_blk.lvl_blkks .lvl_blk .questContain::after {
+        content: "Q";
+        position: absolute;
+        left: 12px;
+        top: 4px;
+        color: #BF604C;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .checksIt + a {
+        color: #BF604C;
+        margin-left: 19px;
+        margin-right: 9px;
+    }
+    .lvl_blk .actions {
+        float: right;
+        padding-top: 2px;
+    }
+.subOpt {
+	padding-top: 10px;
+	margin-bottom: 5px;
+	padding-left: 22px;
+}
+.subOpt input {
+	width: 100% !important;
+	display: block !important;
+	/* float: right; */
+    margin: 0 !imortant;
+}
+.real_form .form_blk.lvl_blkks .lvl_blk .opt + a {
+	color: #CF705C;
+	display: block;
+	position: relative;
+}
+.real_form .form_blk.lvl_blkks .lvl_blk .opt + a i {
+	position: absolute;
+	right: 17px;
+	top: -24px;
+}
+.hasSubChld
+{
+    position: relative;
+}
+#demonstration .trumbowyg-box, .trumbowyg-editor
+{
+    margin: 0 auto;
+}
+#demonstration .trumbowyg-button-pane
+{
+    background: #fff;
+}
+#demonstration .trumbowyg-modal-box .trumbowyg-modal-title {
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0 0 20px;
+	padding: 15px 0 13px;
+	display: block;
+	border-bottom: 1px solid #EEE;
+	color: #fff;
+	background: #BF604C;
+	text-transform: uppercase;
+}
+#demonstration .trumbowyg-modal-box label .trumbowyg-input-infos span {
+	display: block;
+	color: #333;
+	background-color: #fbfcfc;
+	border: 1px solid #DEDEDE;
+	padding: 0 7px;
+	width: 150px;
+	font-weight: normal;
+}
+/*
+.hasSubChld input + a {
+	position: absolute;
+	top: 7px;
+	right: 13px;
+}
+*/
+.hasSubChld .subOpt
+{
+    display: none;
+    padding-top: 0;
+}
+.hasSubChld .subOpt input {
+	width: 100% !important;
+	margin-top: 15px;
+}
+.trumbowyg-box svg {
+	width: 26px !important;
+	height: 98%;
+	fill: #222;
+	padding-top: 9px !important;
+}
+.trumbowyg-box .trumbowyg-editor
+{
+    background: #fff !important;
+}
+.trumbowyg-editor strong 
+{
+    color: #CF705C;
+    font-weight: normal;
+    
+}
+@media(max-width:767px)
+{
+    .addScript .script_heading {
+	margin-bottom: 0 !important;
+	float: none !important;
+	width: 100% !important;
+}
+}

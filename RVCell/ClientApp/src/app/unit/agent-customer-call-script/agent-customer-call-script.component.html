@@ -1,0 +1,230 @@
+<div class="col-md-6 fullLow mmt-15">
+
+  <div class="script_tabs" id="dragScript">
+
+
+    <div class="show_script_content">
+      <!--<h2 class="script_heading"><img src="img/icon_1.png"><span>Agent / Customer call script</span></h2>-->
+      <section class="chatMain">
+        <div id="frame">
+
+          <div class="content">
+            <div class="contact-profile">
+              <img src="../../assets/images/script.png" alt="">
+              <p><strong>Agent / Customer</strong> Call Script</p>
+              <div class="social-media">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="messages" tabindex="1" style="overflow: hidden; outline: none;">
+
+              <div class="tabings">
+                <div class="">
+                  <div class="col-md-12">
+                    <div class="panel with-nav-tabs panel-default">
+                      <div class="panel-heading">
+                        <ul class="nav nav-tabs scriptTabs">
+                          <li class="active"><a href="#tab1default" data-toggle="tab">Basic Script</a></li>
+                          <li><a href="#tab2default" data-toggle="tab">Brand Type Script</a></li>
+                          <li><a href="#tab3default" data-toggle="tab">Unit Type Script</a></li>
+                          <li><a href="#tab4default" data-toggle="tab">Property Type Script</a></li>
+                        </ul>
+                      </div>
+                      <div class="panel-body">
+                        <div class="tab-content">
+                          <div class="tab-pane fade in active" id="tab1default">
+
+                            <!--<ul class="sortable-list ui-sortable">
+
+                              <li class="sent" id="inquiry">
+                                <img src="../../assets/images/agent.png" alt="">
+                                <p>Thank1 you for calling Silver <a href="#">Sands Vacation Rentals .</a> My name is (RV AGENT) , How may I <a href="#">assist</a> you ?</p>
+                              </li>
+                              <li class="sent" id="inquiry">
+                                <img src="../../assets/images/agent.png" alt="">
+                                <p>Are you <a href="#">inquiring</a> about a specific property or would you like me to recommend one for you?</p>
+                              </li>
+
+                              <li class="sent" id="name">
+                                <img src="../../assets/images/agent.png" alt="">
+                                <p>Again, my name is(RV AGENT), may I have your first name?</p>
+                              </li>
+                              <li class="sent">
+                                <img src="../../assets/images/agent.png" alt="">
+                                <p>We have the great Property for you <a href="#ppls">peoples</a>  ? </p>
+                              </li>
+
+                              <li class="sent">
+                                <img src="../../assets/images/agent.png" alt="">
+                                <p>May I have your preferred date of <a href="#"> arrival</a> and <a href="#">departure</a> please?</p>
+                              </li>
+
+                              <li class="sent">
+                                <img src="../../assets/images/agent.png" alt="">
+                                <p>Are you looking for a private home or condo? Would You like to make <a href="#inquiry">inquiry</a> ?</p>
+                              </li>
+
+                              <li class="sent">
+                                <img src="../../assets/images/agent.png" alt="">
+                                <p>How many people including children will be staying at the property on your <a href="#name">name</a>?</p>
+                              </li>
+
+
+                              <li class="sent">
+                                <img src="../../assets/images/agent.png" alt="">
+                                <p>(GUEST NAME) , At this time, I do show a <a href="#">few options</a> for you ?</p>
+                              </li>
+
+
+                              <li class="sent">
+                                <img src="../../assets/images/agent.png" alt="">
+                                <p>Can I confirm this room for you?</p>
+                              </li>
+
+
+                              <li class="sent">
+                                <img src="../../assets/images/agent.png" alt="">
+                                <p>May I have the best <a href="#">phone number</a> to contact you, preferably a cell phone since you will be traveling?</p>
+                              </li>
+
+
+                              <li class="sent">
+                                <img src="../../assets/images/agent.png" alt="">
+                                <p>May I have the full name of the traveler as it appears on your/his/her <a href="#"> identification?</a></p>
+                              </li>
+
+
+                            </ul>-->
+
+             
+
+                          </div>
+                          <div class="tab-pane fade" id="tab2default">
+                            <div style="height:1060px;overflow:auto;">
+                              <ng-scrollbar #scrollEl thumbClass="custom-scrollbars">
+                                <ul class="sortable-list ui-sortable">
+                                  <li class="sent" id="inquiry" *ngFor="let itemScript of ScriptModel">
+                                    <img *ngIf="itemScript.Agent != null" src="../../assets/images/agent.png" alt="">
+                                    <div *ngIf="itemScript.Agent != null" [innerHTML]="itemScript.Agent"> </div>
+                                    <img *ngIf="itemScript.Action != null">
+                                    <div *ngIf="itemScript.Action != null" [innerHTML]="itemScript.Action"> </div>
+                                  </li>
+                                </ul>
+                              </ng-scrollbar>
+                            </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3default">
+
+                              <ul class="sortable-list ui-sortable">
+                                <li class="sent" id="inquiry">
+                                  <img src="../../assets/images/agent.png" alt="">
+                                  <p>Aloha, thank you for calling <a href="#">Coconut Condos</a> My name is (RV AGENT) , How may I assist you today ?</p>
+                                </li>
+
+                                <li class="sent" id="name">
+                                  <img src="../../assets/images/agent.png" alt="">
+                                  <p>I will be more than happy to assist you with that?</p>
+                                </li>
+                                <li class="sent">
+                                  <img src="../../assets/images/agent.png" alt="">
+                                  <p>Again, my name is (RV AGENT) , may I have your <a href="#">first name </a>? </p>
+                                </li>
+
+                                <li class="sent">
+                                  <img src="../../assets/images/agent.png" alt="">
+                                  <p>May I have your preferred date of <a href="#">arrival</a> and <a href="#">departure</a> please?</p>
+                                </li>
+
+                                <li class="sent">
+                                  <img src="../../assets/images/agent.png" alt="">
+                                  <p>How many <a href="#">bedrooms</a> will you need? How many people including children will be staying with you at the property?</p>
+                                </li>
+
+                                <li class="sent">
+                                  <img src="../../assets/images/agent.png" alt="">
+                                  <p>(GUEST NAME) , at this time, I do show a few options for you.</p>
+                                </li>
+
+
+                                <li class="sent">
+                                  <img src="../../assets/images/agent.png" alt="">
+                                  <p>May I <a href="#">confirm</a> this for you?</p>
+
+                                </li>
+
+                              </ul>
+
+                            </div>
+
+                            <div class="tab-pane fade" id="tab4default">
+
+                              <ul class="sortable-list ui-sortable">
+                                <li class="sent" id="inquiry">
+                                  <img src="../../assets/images/agent.png" alt="">
+                                  <p>May I have the full <a href="#">name of the traveler</a> as it appears on your/his/her identification?</p>
+                                </li>
+
+                                <li class="sent" id="name">
+                                  <img src="../../assets/images/agent.png" alt="">
+                                  <p>May I have the best phone number to <a href="#">contact</a> you, preferably a cell phone since you will be traveling?</p>
+                                </li>
+                                <li class="sent">
+                                  <img src="../../assets/images/agent.png" alt="">
+                                  <p>May I have the <a href="#">email address</a> you wish me to send the confirmation to? </p>
+                                </li>
+
+                                <li class="sent">
+                                  <img src="../../assets/images/agent.png" alt="">
+                                  <p>May I have your name as it appears on your <a href="#">Credit Card</a>?</p>
+                                </li>
+
+                                <li class="sent">
+                                  <img src="../../assets/images/agent.png" alt="">
+                                  <p>May I have the full credit <a href="#">card number </a>you wish to book this property with?</p>
+                                </li>
+
+                                <li class="sent">
+                                  <img src="../../assets/images/agent.png" alt="">
+                                  <p>Your <a href="#">expiration</a> date?</p>
+                                </li>
+
+
+                                <li class="sent">
+                                  <img src="../../assets/images/agent.png" alt="">
+                                  <p>May I assist you with <a href="#">another location</a>, property or selection of amenities?</p>
+
+                                </li>
+
+                                <li class="sent">
+                                  <img src="../../assets/images/agent.png" alt="">
+                                  <p>We have luxury vacation rentals on each island with <a href="#">exclusive excursions </a>available?</p>
+
+                                </li>
+
+
+
+
+                              </ul>
+
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+
+    </div>
+
+  </div>
+</div>

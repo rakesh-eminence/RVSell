@@ -1,0 +1,115 @@
+
+<div class="col-md-6 fullLow">
+  <div class="top_bars rightHead  text-uppercase "><i class="fa fa-list "></i>List of Matching Units</div>
+  <!--<app-matchingunit-Seach></app-matchingunit-Seach>-->
+
+  <div class="row search__cust-set" style="margin:0;">
+    <div class="col-xs-12 col-md-12 pr-0 pl-0">
+      <app-search-unit></app-search-unit>
+
+    </div>
+
+
+  </div>
+  <p style="margin-top: 10px;text-align:right;">Total properties shown : {{propertyListFilterModel.length}} of {{totalRecordsCount}}</p>
+
+  <div style="height:1060px;overflow:auto;">
+    <ng-scrollbar #scrollEl thumbClass="custom-scrollbars">
+      <div class="list_grouping accordian_right search-results">
+        <div class="d-block listBloks">
+
+          <ul class="listPar">
+            <li *ngIf="propertyListFilterModel.length == 0 && !isRecordLoad">No Record found</li>
+            <li class="" *ngFor="let item of propertyListFilterModel  let i = index">
+              <a (click)="showPopup(i)">{{item.Name}}<i class="fa fa-plus"></i> </a>
+              <div class="sub_list_dropdown" id="collapseExample" [ngbCollapse]="isCollapsed" *ngIf="show === i && showToggale">
+
+                <div class="upperLogo">
+                  <ul>
+                    <li><img src="../../assets/images/logonew.png" style="max-width: 100px !important"></li>
+                    <li><a href="#">Edit Image</a><br><h4>Rooms : {{item.RoomCount}}</h4></li>
+                    <li><a>Properties</a><a data-toggle="modal" data-backdrop="false" (click)="unitDetailListwView1(item)">Units</a></li>
+                  </ul>
+                </div>
+                <div class="lowerLogo">
+                  <h5>Benefits : </h5>
+                  <p>
+                    {{item.BenefitName}}
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+          <div class="loadMore loadmore-inner" *ngIf="(totalRecordsCount > propertyListFilterModel.length)">
+            <div *ngIf="isRecordLoad"><div class="loading-spiner"><img src="../../../assets/images/loader_small_record.gif" class="Imagelader" /></div></div>
+            <a (click)="loadRecs()"><i class="fa fa-plus"></i> Load More</a>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </ng-scrollbar>
+  </div>
+
+  <!--<div class="list_grouping accordian_right search-results">
+
+    <div>
+
+      <div class="d-block listBloks">
+
+        <ul class="listPar">
+          <li *ngIf="propertyListFilterModel.length == 0 && !isRecordLoad">No Record found</li>
+          <li class="" *ngFor="let item of propertyListFilterModel  let i = index">
+            <a (click)="showPopup(i)">{{item.Name}}<i class="fa fa-plus"></i> </a>
+            <div class="sub_list_dropdown" id="collapseExample" [ngbCollapse]="isCollapsed" *ngIf="show === i && showToggale">
+
+              <div class="upperLogo">
+                <ul>
+                  <li><img src="../../assets/images/logonew.png" style="max-width: 100px !important"></li>
+                  <li><a href="#">Edit Image</a><br><h4>Rooms : {{item.RoomCount}}</h4></li>
+                  <li><a>Properties</a><a data-toggle="modal" data-backdrop="false" (click)="unitDetailListwView1(item)">Units</a></li>
+                </ul>
+              </div>
+              <div class="lowerLogo">
+                <h5>Benefits : </h5>
+                <p>
+                  {{item.BenefitName}}
+                </p>
+              </div>
+
+            </div>
+          </li>
+
+        </ul>
+        <div class="loadMore loadmore-inner" *ngIf="(totalRecordsCount > propertyListFilterModel.length)">
+          <div *ngIf="isRecordLoad"><div class="loading-spiner"><img src="../../../assets/images/loader_small_record.gif" class="Imagelader" /></div></div>
+          <a (click)="loadRecs()"><i class="fa fa-plus"></i> Load More</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>-->
+
+</div>
+
+
+<app-home-UnitModal></app-home-UnitModal>
+
+<ngx-spinner bdColor="rgba(11,11,11,0.8)"
+             size="medium"
+             color="#F5F5F5"
+             type="ball-scale-multiple">
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+
+
+
+
+
+
+

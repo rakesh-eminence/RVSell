@@ -1,0 +1,158 @@
+<button type="button" id="modaldrag" class="button button2 mdlFire" style="float: right;display:none" (click)="modalRoot.show()"></button>
+<app-ng-modal #modalRoot
+              [modalTitle]="'Property View'"
+              [width]="450"
+              [zIndex]="999"
+              [maximizable]="true"
+              [display]="'contents'">
+  <ng-container class="app-modal-body uicustom " style="display: contents!important">
+
+    <div class="container uicontainer modalclass">
+
+
+      <!--<div class="container unit_pop-set">
+        <div class="scroller scroller-left"><i class="glyphicon glyphicon-chevron-left"></i></div>
+        <div class="scroller scroller-right"><i class="glyphicon glyphicon-chevron-right"></i></div>
+        <div class="wrapper">
+          <ul class="nav nav-tabs modal_tab-set list">
+            <li [hidden]="i != selectIndex" [ngClass]="{'active': i==0,'navbock':i > 0}" *ngFor="let item of unitData let i = index">
+              <a data-toggle="tab" (click)="selectTab(i)" href="#home_{{i}}">{{item.PropertyName}}</a>
+              <span class="fa fa-close crossTab" (click)="crossTab(i)"></span>
+            </li>
+
+          </ul>
+        </div>
+      </div>-->
+
+
+      <div class="container unit_pop-set">
+        <div class="scroller scroller-left"><i class="glyphicon glyphicon-chevron-left"></i></div>
+        <div class="scroller scroller-right"><i class="glyphicon glyphicon-chevron-right"></i></div>
+        <div class="wrapper">
+          <ul class="nav nav-tabs modal_tab-set list" id="ulIdlistMenu">
+            <li [hidden]="i != selectIndex" [ngClass]="{'active ': i==0,'navbock ':i > 0}" class="tabmenu_{{i}}" *ngFor="let item of unitData let i = index">
+              <a data-toggle="tab" (click)="selectTab(i)" href="#home_{{i}}">{{item.PropertyName}}</a>
+              <span class="fa fa-close crossTab" (click)="crossTab(i)"></span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <!--test-->
+      <!--tsest-->
+
+
+
+      <div class="tab-content">
+
+        <div id="home_{{l}}" [ngClass]="{'firsttabShow': l == selectIndex, 'OthertabShow': l != selectIndex }" class="tab-pane fade in active" *ngFor="let item3 of unitData let l = index">
+          <h4>{{item3.PropertyName == undefined ? '--select unit--' : item3.PropertyName}}</h4>
+          <table class="table ">
+            <tr style="width:100% !important">
+              <td style="width:25% !important"><label>View Unit: </label></td>
+
+         
+              <td>
+                <div class="dropdown" style="">
+                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    {{selectUnitdata[selectIndex]?.Name == " " ?  "select" : selectUnitdata[selectIndex]?.Name}}
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li *ngFor="let item1 of unitData[l].propertyUnitdropList "><a (click)="onSelectChange(l,item1,$event.value)">{{item1.Name}}</a></li>
+                  </ul>
+                </div>
+              </td>
+
+              <!--<td style="width:75% !important; height:100px!important">
+                <select placeholder="select" [(ngModel)]="selectUnit[l]" (change)="onSelectChange(l,selectUnit[l])">
+                  <option *ngFor="let item1 of unitData[l].propertyUnitdropList" [ngValue]="item1">
+                    {{item1.Name}}
+                  </option>
+
+                </select>
+
+              </td>-->
+
+
+
+
+            </tr>
+
+          </table>
+          <table class="table tableunit">
+
+
+            <tr>
+              <td colspan="3">Description</td>
+            </tr>
+            <tr>
+              <td colspan="3">{{  selectUnitdata[selectIndex]?.Description }}</td>
+            </tr>
+            <tr>
+              <td colspan="3">Additional Information</td>
+            </tr>
+            <tr>
+              <td colspan="3">{{ selectUnitdata[selectIndex]?.AdditionalInformation }}</td>
+            </tr>
+            <tr>
+              <td>Property Unit Name</td>
+              <td>Max Occupancy</td>
+              <td>Pets Allowed</td>
+            </tr>
+            <tr>
+              <td>{{  selectUnitdata[selectIndex]?.Name }}</td>
+              <td>{{ selectUnitdata[selectIndex]?.MaxOccupancy}}</td>
+              <td>
+                <span *ngIf=" selectUnitdata[selectIndex]?.PetsAllowed === true"><i class='fa fa-check-circle' style='font-size:24px;color:green'></i></span>
+                <span *ngIf=" selectUnitdata[selectIndex]?.PetsAllowed === false"><i class='fa fa-times-circle' style='font-size:24px;color:red'></i></span>
+
+              </td>
+            </tr>
+            <tr>
+              <td>Children Allowed</td>
+              <td>Number Of Bathrooms</td>
+              <td>Booking Availability Message</td>
+            </tr>
+            <tr>
+              <td>
+                <span *ngIf=" selectUnitdata[selectIndex]?.ChildrenAllowed === true"><i class='fa fa-check-circle' style='font-size:24px;color:green'></i></span>
+                <span *ngIf=" selectUnitdata[selectIndex]?.ChildrenAllowed === false"><i class='fa fa-times-circle' style='font-size:24px;color:red'></i></span>
+
+              </td>
+              <td>{{  selectUnit.NumberOfBathrooms  }}</td>
+
+              <td>{{  selectUnitdata[selectIndex]?.BookingAvailabilityMessage  }}</td>
+            </tr>
+            <tr>
+              <td>Number Of Bedrooms</td>
+              <td>Rollaways Allowed</td>
+              <td>PetDeposit</td>
+            </tr>
+            <tr>
+              <td>{{  selectUnit.NumberOfBedrooms }}</td>
+              <td>
+                <span *ngIf="selectUnitdata[selectIndex]?.RollawaysAllowed === true"><i class='fa fa-check-circle' style='font-size:24px;color:green'></i></span>
+                <span *ngIf="selectUnitdata[selectIndex]?.RollawaysAllowed === false"><i class='fa fa-times-circle' style='font-size:24px;color:red'></i></span>
+              </td>
+              <td>{{  selectUnitdata[selectIndex]?.PetDeposit }}</td>
+
+            </tr>
+
+          </table>
+
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </ng-container>
+  <button type="button" class="button button2" style="float: right;" (click)="modalRoot.hide()">Close1</button>
+
+</app-ng-modal>
+
+
+
