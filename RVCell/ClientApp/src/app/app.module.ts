@@ -47,6 +47,7 @@ import { MatSelectModule } from  '@angular/material';
     ModalComponent,
 
 
+
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
