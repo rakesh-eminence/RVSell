@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-    import { NgModule } from '@angular/core';
+ import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -49,6 +49,8 @@ import { MatSelectModule } from  '@angular/material';
 
 
   ],
+
+ 
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
