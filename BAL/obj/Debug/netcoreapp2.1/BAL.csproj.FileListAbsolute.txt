@@ -82,3 +82,17 @@ D:\RVsellRepo2\BAL\obj\Debug\netcoreapp2.1\BAL.AssemblyInfo.cs
 D:\RVsellRepo2\BAL\obj\Debug\netcoreapp2.1\BAL.csproj.CopyComplete
 D:\RVsellRepo2\BAL\obj\Debug\netcoreapp2.1\BAL.dll
 D:\RVsellRepo2\BAL\obj\Debug\netcoreapp2.1\BAL.pdb
+C:\testcloneRvsell\RVSell\BAL\bin\Debug\netcoreapp2.1\BAL.deps.json
+C:\testcloneRvsell\RVSell\BAL\bin\Debug\netcoreapp2.1\BAL.dll
+C:\testcloneRvsell\RVSell\BAL\bin\Debug\netcoreapp2.1\BAL.pdb
+C:\testcloneRvsell\RVSell\BAL\bin\Debug\netcoreapp2.1\DAL.dll
+C:\testcloneRvsell\RVSell\BAL\bin\Debug\netcoreapp2.1\Entities.dll
+C:\testcloneRvsell\RVSell\BAL\bin\Debug\netcoreapp2.1\DAL.pdb
+C:\testcloneRvsell\RVSell\BAL\bin\Debug\netcoreapp2.1\Entities.pdb
+C:\testcloneRvsell\RVSell\BAL\obj\Debug\netcoreapp2.1\BAL.csprojAssemblyReference.cache
+C:\testcloneRvsell\RVSell\BAL\obj\Debug\netcoreapp2.1\BAL.csproj.CoreCompileInputs.cache
+C:\testcloneRvsell\RVSell\BAL\obj\Debug\netcoreapp2.1\BAL.AssemblyInfoInputs.cache
+C:\testcloneRvsell\RVSell\BAL\obj\Debug\netcoreapp2.1\BAL.AssemblyInfo.cs
+C:\testcloneRvsell\RVSell\BAL\obj\Debug\netcoreapp2.1\BAL.csproj.CopyComplete
+C:\testcloneRvsell\RVSell\BAL\obj\Debug\netcoreapp2.1\BAL.dll
+C:\testcloneRvsell\RVSell\BAL\obj\Debug\netcoreapp2.1\BAL.pdb
