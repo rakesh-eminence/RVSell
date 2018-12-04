@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-    import { NgModule } from '@angular/core';
+ import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
@@ -29,7 +29,7 @@ import { Globals } from './globals';
 import { ScrollbarModule } from 'ngx-scrollbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from  '@angular/material';
-
+//apptest1
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +49,8 @@ import { MatSelectModule } from  '@angular/material';
 
 
   ],
-  
+
+ 
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
